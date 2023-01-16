@@ -1,21 +1,19 @@
 import './App.css';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
-import SnakeGame from './components/games/snakeGame';
-import Body from './components/body/Body';
+import Intro from './components/intro/Intro';
+import Form from './components/formulario/Form';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      <Navbar />
-      <Body />
+    <div className="App container-fluid">
       
-      <Routes>
-        <Route path='/snakeGame' element={<SnakeGame />} />
-      </Routes>
+        <Navbar />
+        <Intro presentation="¡Bienvenidos! Mi nombre es Alan Reale y soy Frontend Developer." proyect="My Suitcase es un portfolio para que puedan ver los proyectos que he realizado." />
+        <Form />
+        <Footer copyright='© My Suitcase. Todos los derechos reservados 2023'/>
 
-      </BrowserRouter>
     </div>
   );
 }
